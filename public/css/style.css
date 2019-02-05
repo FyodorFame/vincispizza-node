@@ -1,0 +1,204 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #FBDD40;
+    box-sizing: border-box;
+    font-family: 'Roboto Mono', monospace;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    
+}
+
+.parallax-container {
+	bottom: 0;
+	left: 0;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	perspective: 1px;
+	position: fixed;
+	right: 0;
+	top: 0;
+}
+
+.content-container {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+}
+
+.parallax {
+	height: 100%;
+  	position: relative;
+  	transform-style: preserve-3d;
+}
+
+.hero-image-parallax {
+	background-color: #FBDD40;
+	transform: translateZ(-1px) scale(2);
+  	height: 100%;
+  	width: 100%;
+  	position: absolute;
+  	top: calc(50% - 50vh);
+}
+
+.hero-image { 
+	align-items: center;
+	background-size: cover;
+	display: flex; 
+	height: 100%; 
+	justify-content: center;
+	position: relative; 
+}
+
+.hero-image .logo-image {
+	display: inline-block;
+	max-width: 800px;
+	width: 100%;
+}
+
+.foreground {
+	position: absolute;
+	top: 100%;
+	width: 100%; 
+	background: #FBDD40;
+	padding-top: 30px;
+	padding-bottom: 50px;
+	right: 0;
+	left: 0;
+}
+
+.menu .items {
+	padding: 0;
+}
+
+.menu .items li {
+	display: flex;
+	justify-content: space-between;
+	font-weight: 700;
+	margin-bottom: 4px;
+}
+
+.menu .items.extras li {
+	justify-content: flex-start;
+}
+
+.menu .items .ingredients {
+	font-family: inherit;
+	font-weight: 400;
+}
+
+.menu .items li .prices span {
+	display: inline-block;
+	text-align: right;
+	width: 60px;
+}
+
+.header {
+	text-decoration: underline;
+}
+
+.menu .name {
+	width: 150px;
+}
+
+.menu .items.extras .name {
+	min-width: 150px;
+}
+
+.menu .description {
+	font-weight: 400;
+	text-align: right;
+}
+
+.menu .items.extras .description {
+	text-align: left;
+}
+
+.menu .items .price-header {
+	justify-content: flex-end;
+	margin-bottom: 8px;
+}
+
+.scroll-down-arrow {
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #fff;
+	bottom: 20px;
+	height: 0;
+	position: absolute;
+	width: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    max-width: 310px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.grid .col {
+    width: 100%;
+    height: 120px;
+}
+
+.instagram-image {
+    background: no-repeat center;
+    background-size: cover;
+}
+
+.margin-bottom-30 {
+    margin-bottom: 30px;
+}
+
+.padding-bottom-50 {
+    padding-bottom: 50px;
+}
+
+.meta-information {
+    display: none;
+}
+
+@media only screen and (min-width: 460px) {
+    .grid {
+        max-width: 410px;
+        grid-template-columns: repeat(2, 200px);
+    }
+
+    .grid .col {
+        height: 150px;
+    }
+}
+
+@media only screen and (min-width: 680px) {
+    .grid {
+        max-width: 630px;
+        grid-template-columns: repeat(4, 150px);
+    }
+
+    .grid .col {
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 880px) {
+    .grid {
+        max-width: 830px;
+        grid-template-columns: repeat(4, 200px);
+    }
+
+    .grid .col {
+        height: 160px;
+    }
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Vinci's Pizza is a purveyor of good pizza, by the slice and whole pizza, in Napier, Hawke's Bay, NZ. Vinci's uses only the best, freshly sourced, ingredients. Open Tuesday to Saturday" />
+    <title>Vinci's Pizza | Good pizza, by the slice and whole, in Napier, Hawke's Bay, NZ</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <h1>Vinci's Pizza, Some of the Best Pizza in Napier, Hawke's Bay</h1>
+    <main class="parallax-container">
+        <section class="parallax">
+            <section class="hero-image-parallax hero-image">
+                <img class="logo-image" src="/img/hero-logo2.png" alt="Vinci's pizza, by the slice and whole, made with the best, freshly sourced ingredients.">
+                <div class="scroll-down-arrow"></div>
+            </section>
+
+            <section class="foreground menu-container container foreground ">
+                <div class="menu content-container">
+                    <h2 class="meta-information">Vinci's Pizza, Sells Good Pizza. 18 Inch Whole Pizzas, and Pizza by
+                        the Slice, in Napier, Hawke's Bay, NZ</h2>
+                    <h2 class="header"><img src="~/images/pizza-text.png" alt="Vinci's pizza sells good pizza, in Napier, Hawke's Bay, NZ."></h2>
+                    <ul class="pizza items">
+                        <li class="price-header">Slice / 18" whole</li>
+
+                        <li class="pizza-name">Margherita <span class="prices">$5 / $26</span></li>
+                        <li class="ingredients">Tomato, Mozzarella, Basil, Parmesan</li>
+
+                        <li class="pizza-name">Mortadella<span class="prices">$6 / $29</span></li>
+                        <li class="ingredients">Tomato, Mozzarella, Mortadella Salami, Parmesan</li>
+
+                        <li class="pizza-name">Capricciosa<span class="prices">$6 / $30</span></li>
+                        <li class="ingredients">Tomato, Mozzarella, Artichoke, <br />Olive, Smoked Guanciale, Parmesan</li>
+
+                        <li class="pizza-name">Mushroom<span class="prices">$6 / $30</span></li>
+                        <li class="ingredients">Mushroom Cream with Rosemary & Red Onion, <br />Mozzarella, Mushroom,
+                            Caper, Parmesan</li>
+
+                        <li class="pizza-name">No Cheese, No Problems<span class="prices">$5 / $26</span></li>
+                        <li class="ingredients">Any pizza without the cheese</li>
+
+                        <li>Half / Half<span class="prices">$30</span></li>
+                    </ul>
+
+                    <h2 class="header extras">Extras</h2>
+                    <ul class="items extras">
+                        <li>
+                            <span class="name">Freebies -</span>
+                            <span class="description">Oregano, Hot Sauce</span>
+                        </li>
+
+                        <li>
+                            <span class="name">$2 -</span>
+                            <span class="description">Basil, Mushroom, Artichoke, Olive, Anchovy, Caper</span>
+                        </li>
+
+                        <li>
+                            <span class="name">$4 -</span>
+                            <span class="description">Mortadella Salami, <br /> Smoked Guanciale</span>
+                        </li>
+                    </ul>
+
+                    <div>
+                        All of our meats are local and true free range. Veggies and herbs are sourced locally where
+                        possible.
+                    </div>
+                </div>
+
+                <div class="content-container">
+                    <h2 class="header margin-bottom-30">Instagram</h2>
+                </div>
+                <div class="grid">
+                    <% images.forEach(function(image) { %>
+                    <a class="col instagram-image" target="_blank" style="background: url(<%= image.images.standard_resolution.url %>) no-repeat center center; background-size: cover;"
+                        href="<%= image.link %>"></a>
+                    <% }) %>
+                </div>
+                <div class="content-container">
+                    <h2 class="header extras">Contact</h2>
+                    <div>29a Hastings St, Napier</div>
+                    <div>Ph: 06 650 7779</div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+
+</html>
