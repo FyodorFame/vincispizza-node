@@ -13,6 +13,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+const logger = (req, res, next) => {
+    if(typeof process.env.INSTAGRAM_ACCESS_TOKEN === 'undefined') {
+        console.log('instagram access token is undefined');
+    } 
+    if(process.env.INSTAGRAM_ACCESS_TOKEN == null) {
+        console.log('instagram access token is null');
+    }
+    if(process.env.INSTAGRAM_ACCESS_TOKEN.length === 0) {
+        console.log('access token is undefined');
+    }
+    next();
+}
+
+app.use(logger);
+
 app.get('/', async (req, res, next) => {
     try {
         var access_token = process.env.INSTAGRAM_ACCESS_TOKEN;
@@ -25,6 +40,6 @@ app.get('/', async (req, res, next) => {
     }
 });
 
-app.listen(process.env.PORT, function() {
+app.listen(process.env.PORT || 3000, function() {
    
 });
