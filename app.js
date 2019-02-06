@@ -26,6 +26,5 @@ app.get('/', async (req, res, next) => {
 });
 
 app.listen(process.env.PORT, function() {
-    console.log(path.join(__dirname, 'public'));
-    console.log('listening on port 3000...');
+   
 });
